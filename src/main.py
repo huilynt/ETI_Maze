@@ -1,3 +1,6 @@
+# Display main menu
+
+
 def display_menu():
     menu = '''
     MAIN MENU
@@ -33,6 +36,14 @@ def option_functions(option):
         message = 'Exit maze'
     return message
 
+
+# [1] Read and load maze from file
+
+# [2] View maze
+
+# [3] Play maze game
+
+# [4] Configure current maze
 
 # while True:
 #     display_menu()

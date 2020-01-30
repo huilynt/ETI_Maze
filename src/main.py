@@ -7,5 +7,3 @@
 # [3] Play maze game
 
 # [4] Configure current maze
-
-# test

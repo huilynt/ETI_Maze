@@ -1,6 +1,4 @@
 # Display main menu
-
-
 def display_menu():
     menu = '''
     MAIN MENU
@@ -17,7 +15,12 @@ def display_menu():
 
 
 def get_option():
-    option = int(input('Enter your option: '))
+    option = input('Enter your option: ')
+    if option.isdigit():
+        option = int(option)
+    else:
+        option = -1
+        print('Invalid option!')
     return option
 
 
@@ -25,7 +28,6 @@ def option_functions(option):
     message = ''
     if option == 1:
         message = 'Read and load maze from file'
-
     elif option == 2:
         message = 'View maze'
     elif option == 3:
@@ -34,6 +36,9 @@ def option_functions(option):
         message = 'Configure current maze'
     elif option == 0:
         message = 'Exit maze'
+    else:
+        message = 'Invalid option!'
+    print(message)
     return message
 
 

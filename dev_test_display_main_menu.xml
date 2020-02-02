@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="me" name="pytest" skipped="0" tests="3" time="0.069" timestamp="2020-02-02T15:16:57.680730"><testcase classname="test_menu" file="test_menu.py" line="11" name="test_display_menu" time="0.001"><system-out>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="me" name="pytest" skipped="0" tests="3" time="0.135" timestamp="2020-02-02T17:57:10.223679"><testcase classname="test_menu" file="test_menu.py" line="11" name="test_display_menu" time="0.002"><system-out>
     MAIN MENU
     =========
     [1] Read and load maze from file
@@ -8,4 +8,4 @@
 
     [0] Exit maze
     
-</system-out></testcase><testcase classname="test_menu" file="test_menu.py" line="26" name="test_get_option" time="0.005"></testcase><testcase classname="test_menu" file="test_menu.py" line="40" name="test_option_function" time="0.001"></testcase></testsuite></testsuites>
+</system-out></testcase><testcase classname="test_menu" file="test_menu.py" line="26" name="test_get_option" time="0.002"></testcase><testcase classname="test_menu" file="test_menu.py" line="40" name="test_option_function" time="0.003"></testcase></testsuite></testsuites>

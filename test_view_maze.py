@@ -1,7 +1,7 @@
 import mock
 import io
 
-from src.main import *
+from src.maze_functions import *
 
 maze = [['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
         ['X', 'O', 'O', 'O', 'X', 'O', 'A', 'X'],

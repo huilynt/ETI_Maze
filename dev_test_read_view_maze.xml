@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="me" name="pytest" skipped="0" tests="5" time="0.133" timestamp="2020-02-03T22:10:05.908736"><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="41" name="test_read_file_valid" time="0.004"><system-out>Option [1] Read and load maze from file
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="me" name="pytest" skipped="0" tests="5" time="0.213" timestamp="2020-02-04T00:27:53.515074"><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="41" name="test_read_file_valid" time="0.006"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
-</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="47" name="test_read_file_invalid" time="0.002"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="47" name="test_read_file_invalid" time="0.003"><system-out>Option [1] Read and load maze from file
 Invalid file type!
-</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="53" name="test_store_location_valid" time="0.003"></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="59" name="test_store_location_invalid" time="0.002"><system-out>Invalid maze!
+</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="53" name="test_store_location_valid" time="0.002"></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="59" name="test_store_location_invalid" time="0.003"><system-out>Invalid maze!
 Invalid maze!
 Invalid maze!
 </system-out></testcase><testcase classname="test_view_maze" file="test_view_maze.py" line="16" name="test_view_maze" time="0.004"></testcase></testsuite></testsuites>

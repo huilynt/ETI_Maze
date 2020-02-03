@@ -13,6 +13,7 @@ maze = [['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
         ['X', 'B', 'X', 'X', 'X', 'X', 'X', 'X']]
 
 
+# Test that the maze is correctly printed out
 def test_view_maze():
     with mock.patch('sys.stdout', new=io.StringIO()) as fake_stdout:
         display_maze(maze)

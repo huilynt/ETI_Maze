@@ -2,12 +2,12 @@
 from maze_functions import *
 import csv
 
-maze=read_file()
-display_maze(maze)
-display_menu()
-option= get_option()
-option_function(option)
-configOption=Display_config_menu()
-config_options(configOption,maze)
+while True:
+    maze=read_file()
+    display_maze(maze)
+    display_menu()
+    option= get_option()
+    option_function(option,maze)
+
 
 

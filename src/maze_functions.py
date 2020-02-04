@@ -23,10 +23,11 @@ def get_option():
 		print("Invalid Option!")
 	return option
 
-def option_function(option):
+def option_function(option,maze):
 	if option == 4:
 		print('Configure current maze')
 		Display_config_menu()
+		config_options(maze)
 	else:
 		print("FAILURE")
 
@@ -73,42 +74,31 @@ def Display_config_menu():
 	print()
 	print("[0] Exit to Main Menu")
 	print()
+
+	return "Maze Configuration Menu is displaying"
+
+#Function for options in configuration menu - Display text and input
+def config_options(maze):
+	#Retrieve user input for which configuration option they want
 	configOption=input("Enter your options:")
 	if (0 <= int(configOption) < 5):
 		configOption = int(configOption)
 	else:
 		print("Invalid Option!")
-	return configOption
-
-
-	return "Maze Configuration Menu is displaying"
-
-#Function for options in configuration menu - Display text and input
-def config_options(configOption,maze):
 	#Option for creating wall
 	if configOption == 1:
 		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
 		print("'B' to return to Configure Menu.")
 		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
 		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
-                        #print(maze[int(optionInput)][int(optionInputColumn)])
-			maze[int(optionInput)-1][int(optionInputColumn)-1] = "Z"
-##			with open('maze.csv', mode='w') as maze_file:
-##                                maze_writer = csv.writer(maze_file, delimiter=',',quoting=csv.QUOTE_MINIMAL)
+		#print(maze[int(optionInput)][int(optionInputColumn)])
+			maze[int(optionInput)-1][int(optionInputColumn)-1] = "X"
 			file = open('maze.csv','w')
 			for row in maze:
                                 for col in row:
                                         file.write(col+',')
                                 file.write('\n')
                         #file.close()
-##                        for row in maze:
-##                                for col in row:
-##                                        print("test")
-##                                        file.write(col + ',')
-##                                                maze_writer.writerow(col)
-##                                        maze_writer.writerow('\n')
-##                                file.write('\n')
-##                        file.close()
 		elif optionInput == "B":
 			Display_config_menu()
 		elif optionInput == "M":
@@ -117,6 +107,26 @@ def config_options(configOption,maze):
 			print("Invalid Option")
 		return "Option Number 1: Create Wall has been selected."
 
+	#option for creating passageway
+	elif configOption == 2:
+		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
+		print("'B' to return to Configure Menu.")
+		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
+		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
+			maze[int(optionInput)-1][int(optionInputColumn)-1] = "O"
+			file = open('maze.csv','w')
+			for row in maze:
+                                for col in row:
+                                        file.write(col+',')
+                                file.write('\n')
+                        #file.close()
+		elif optionInput == "B":
+			Display_config_menu()
+		elif optionInput == "M":
+			display_menu()
+		else:
+			print("Invalid Option")
+		return "Option Number 1: Create Passageway has been selected."
 	else:
 		print("STOP")
 

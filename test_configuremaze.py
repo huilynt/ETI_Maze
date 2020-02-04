@@ -1,14 +1,21 @@
 import pytest
+import unittest
+from src.maze_functions import *
 
 #Test for displaying configuration menu
+
 def test_display_config_menu():
-	working= Display_config_menu()
-	assert working = " Configuration Menu is displayed successfully"
+	working = Display_config_menu()
+	assert working == "Maze Configuration Menu is displaying"
 
 #Test for creating wall
 def test_create_wall():
-	createWall(2,1)
-	assert maze[2][1] == "X"
+	option=4
+	option_function(option)
+	maze=read_file()
+	configOption=1
+	config_options(configOption)
+	assert maze_functions.maze[2][1] == "X"
 
 #Test for creating passageway
 def test_create_passageway():

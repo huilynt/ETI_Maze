@@ -19,4 +19,5 @@ def test_view_maze():
         display_maze(maze)
 
     maze_result = '\n'.join(str(row) for row in maze)
+    maze_result += '\n'
     assert maze_result == fake_stdout.getvalue()

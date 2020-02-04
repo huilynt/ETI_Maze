@@ -100,7 +100,7 @@ def store_location(maze):
 # [2] View maze
 def display_maze(maze):
     disp_maze = '\n'.join(str(row) for row in maze)
-    print(disp_maze, end='')
+    print(disp_maze)
     return disp_maze
 
 

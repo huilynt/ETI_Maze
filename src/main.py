@@ -17,7 +17,6 @@ while running:
     elif option == 2:
         print('View maze')
         display_maze(maze)
-        print(start, end)
     elif option == 3:
         print('Play maze game')
     elif option == 4:

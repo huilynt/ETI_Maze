@@ -11,18 +11,18 @@ while running:
     display_menu()
     option = get_option()
     if option == 1:
-        print('Read and load maze from file')
+        print('[1] Read and load maze from file')
         maze = read_file()
         start, end = store_location(maze)
     elif option == 2:
-        print('View maze')
+        print('[2] View maze')
         display_maze(maze)
     elif option == 3:
-        print('Play maze game')
+        print('[3] Play maze game')
     elif option == 4:
-        print('Configure current maze')
+        print('[4] Configure current maze')
     elif option == 0:
-        print('Exit maze')
+        print('[0] Exit maze')
         running = False
     else:
         print('Invalid option! Please try again!')

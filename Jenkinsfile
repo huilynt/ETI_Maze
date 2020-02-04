@@ -8,10 +8,10 @@ pipeline {
                 sh 'pytest -v --cov --junitxml=results.xml'
             }
         }
-        post {
-            always {
-                junit '**/failsafe-reports/*MYSQL.xml'
-            }
+    }
+    post {
+        always {
+            junit '**/*.xml'
         }
     }
 }

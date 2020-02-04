@@ -3,10 +3,15 @@ pipeline {
         dockerfile true
     }
     stages {
-        stage('test') {
+        stage('Test') {
             steps {
-                sh 'pytest -v --cov'
+                sh 'pytest -v --cov --junitxml=results.xml'
             }
+        }
+    }
+    post {
+        always {
+            junit '**/*.xml'
         }
     }
 }

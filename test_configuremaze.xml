@@ -1,19 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="7" hostname="DESKTOP-IDR51U3" name="pytest" skipped="0" tests="7" time="0.204" timestamp="2020-02-05T00:53:46.922610"><testcase classname="test_configuremaze" file="test_configuremaze.py" line="6" name="test_display_config_menu" time="0.002"><failure message="OSError: reading from stdin while output is captured">def test_display_config_menu():
-&gt;   	working = Display_config_menu()
-
-test_configuremaze.py:8: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src\maze_functions.py:76: in Display_config_menu
-    configOption=input(&quot;Enter your options:&quot;)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = &lt;_pytest.capture.DontReadFromInput object at 0x000001D3077BDB38&gt;, args = ()
-
-    def read(self, *args):
-&gt;       raise IOError(&quot;reading from stdin while output is captured&quot;)
-E       OSError: reading from stdin while output is captured
-
-..\..\appdata\local\programs\python\python36\lib\site-packages\_pytest\capture.py:706: OSError</failure><system-out>CONFIGURATION MENU
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="4" hostname="DESKTOP-IDR51U3" name="pytest" skipped="0" tests="7" time="0.331" timestamp="2020-02-05T12:42:19.098487"><testcase classname="test_configuremaze" file="test_configuremaze.py" line="9" name="test_display_config_menu" time="0.004"><system-out>CONFIGURATION MENU
 ==================
 [1] Create Wall
 [2] Create Passageway
@@ -22,25 +7,17 @@ E       OSError: reading from stdin while output is captured
 
 [0] Exit to Main Menu
 
-Enter your options:</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="11" name="test_create_wall" time="0.002"><failure message="OSError: reading from stdin while output is captured">def test_create_wall():
-    	option=4
-&gt;   	option_function(option)
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="14" name="test_create_wall" time="0.007"><system-out>Option [1] Read and load maze from file
+Number of lines read: 8
 
-test_configuremaze.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-src\maze_functions.py:29: in option_function
-    Display_config_menu()
-src\maze_functions.py:76: in Display_config_menu
-    configOption=input(&quot;Enter your options:&quot;)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = &lt;_pytest.capture.DontReadFromInput object at 0x000001D3077BDB38&gt;, args = ()
+	MAIN MENU
 
-    def read(self, *args):
-&gt;       raise IOError(&quot;reading from stdin while output is captured&quot;)
-E       OSError: reading from stdin while output is captured
+	=========
 
-..\..\appdata\local\programs\python\python36\lib\site-packages\_pytest\capture.py:706: OSError</failure><system-out>Configure current maze
+	[4] Configure current maze
+	
+Configure current maze
 CONFIGURATION MENU
 ==================
 [1] Create Wall
@@ -50,24 +27,44 @@ CONFIGURATION MENU
 
 [0] Exit to Main Menu
 
-Enter your options:</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="20" name="test_create_passageway" time="0.002"><failure message="NameError: name &apos;createPassageway&apos; is not defined">def test_create_passageway():
-&gt;   	createPassageway(3,1)
-E    NameError: name &apos;createPassageway&apos; is not defined
+Enter the coordinate of the item you wish to change E.g. Row, Column
+&apos;B&apos; to return to Configure Menu.
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="24" name="test_create_passageway" time="0.017"><system-out>Option [1] Read and load maze from file
+Number of lines read: 8
 
-test_configuremaze.py:22: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="25" name="test_create_startpoint" time="0.001"><failure message="NameError: name &apos;createStartpoint&apos; is not defined">def test_create_startpoint():
+
+	MAIN MENU
+
+	=========
+
+	[4] Configure current maze
+	
+Configure current maze
+CONFIGURATION MENU
+==================
+[1] Create Wall
+[2] Create Passageway
+[3] Create Start Point
+[4] Create End Point
+
+[0] Exit to Main Menu
+
+Enter the coordinate of the item you wish to change E.g. Row, Column
+&apos;B&apos; to return to Configure Menu.
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="34" name="test_create_startpoint" time="0.002"><failure message="NameError: name &apos;createStartpoint&apos; is not defined">def test_create_startpoint():
 &gt;   	createStartpoint(5,1)
 E    NameError: name &apos;createStartpoint&apos; is not defined
 
-test_configuremaze.py:27: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="30" name="test_create_endpoint" time="0.002"><failure message="NameError: name &apos;createEndpoint&apos; is not defined">def test_create_endpoint():
+test_configuremaze.py:36: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="39" name="test_create_endpoint" time="0.002"><failure message="NameError: name &apos;createEndpoint&apos; is not defined">def test_create_endpoint():
 &gt;   	createEndpoint(1,8)
 E    NameError: name &apos;createEndpoint&apos; is not defined
 
-test_configuremaze.py:32: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="35" name="test_exit_mainmenu" time="0.000"><failure message="NameError: name &apos;configChoice&apos; is not defined">def test_exit_mainmenu():
+test_configuremaze.py:41: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="44" name="test_exit_mainmenu" time="0.002"><failure message="NameError: name &apos;configChoice&apos; is not defined">def test_exit_mainmenu():
 &gt;   	choice= configChoice(&quot;B&quot;)
 E    NameError: name &apos;configChoice&apos; is not defined
 
-test_configuremaze.py:37: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="40" name="test_exit_configmenu" time="0.000"><failure message="NameError: name &apos;configChoice&apos; is not defined">def test_exit_configmenu():
+test_configuremaze.py:46: NameError</failure></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="49" name="test_exit_configmenu" time="0.001"><failure message="NameError: name &apos;configChoice&apos; is not defined">def test_exit_configmenu():
 &gt;   	choice= configChoice(&quot;M&quot;)
 E    NameError: name &apos;configChoice&apos; is not defined
 
-test_configuremaze.py:42: NameError</failure></testcase></testsuite></testsuites>
+test_configuremaze.py:51: NameError</failure></testcase></testsuite></testsuites>

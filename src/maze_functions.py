@@ -126,7 +126,29 @@ def config_options(maze):
 			display_menu()
 		else:
 			print("Invalid Option")
-		return "Option Number 1: Create Passageway has been selected."
+		return "Option Number 2: Create Passageway has been selected."
+
+	#option for creating startpoint
+	elif configOption == 3:
+		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
+		print("'B' to return to Configure Menu.")
+		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
+		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
+			maze[int(optionInput)-1][int(optionInputColumn)-1] = "A"
+			file = open('maze.csv','w')
+			for row in maze:
+                                for col in row:
+                                        file.write(col+',')
+                                file.write('\n')
+                        #file.close()
+		elif optionInput == "B":
+			Display_config_menu()
+		elif optionInput == "M":
+			display_menu()
+		else:
+			print("Invalid Option")
+		return "Option Number 3: Create Passageway has been selected."
+
 	else:
 		print("STOP")
 

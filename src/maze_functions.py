@@ -132,22 +132,67 @@ def config_options(maze):
 	elif configOption == 3:
 		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
 		print("'B' to return to Configure Menu.")
-		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
-		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
-			maze[int(optionInput)-1][int(optionInputColumn)-1] = "A"
-			file = open('maze.csv','w')
-			for row in maze:
-                                for col in row:
-                                        file.write(col+',')
-                                file.write('\n')
+		#optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
+		inputOptions=input("'M' to return to Main Menu:")
+		if (inputOptions != "B" or inputOptions != "M"):
+			optionInputRow, optionInputColumn= inputOptions.split(',')
+			if (optionInputRow.isdigit() and 0<=int(optionInputRow)<9 and 0<=int(optionInputColumn)<9):
+				for row in maze:
+					for col in row:
+						if col == "A":
+							colindex = row.index(col)
+							rowindex = maze.index(row)
+							maze[rowindex][colindex] = "X"
+							break
+						else:
+							continue
+				maze[int(optionInputRow)-1][int(optionInputColumn)-1] = "A"
+				file = open('maze.csv','w')
+				for row in maze:
+					for col in row:
+						file.write(col+',')
+					file.write('\n')
                         #file.close()
-		elif optionInput == "B":
+		elif inputOptions == "B":
 			Display_config_menu()
-		elif optionInput == "M":
+		elif inputOptions == "M":
 			display_menu()
 		else:
 			print("Invalid Option")
-		return "Option Number 3: Create Passageway has been selected."
+		return "Option Number 3: Create starting point has been selected."
+
+	#option for creating endpoint
+	elif configOption == 4:
+		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
+		print("'B' to return to Configure Menu.")
+		inputOptions=input("'M' to return to Main Menu:")
+		#print(inputOptions)
+		if (inputOptions != "B" or inputOptions != "M"):
+			optionInputRow, optionInputColumn= inputOptions.split(',')
+			if (optionInputRow.isdigit() and 0<=int(optionInputRow)<9 and 0<=int(optionInputColumn)<9):
+				for row in maze:
+					for col in row:
+						if col == "B":
+							colindex = row.index(col)
+							rowindex = maze.index(row)
+							maze[rowindex][colindex] = "X"
+							break
+						else:
+							continue
+				maze[int(optionInputRow)-1][int(optionInputColumn)-1] = "B"
+				file = open('maze.csv','w')
+				for row in maze:
+					for col in row:
+						file.write(col+',')
+					file.write('\n')
+                        #file.close()
+		elif inputOptions == "B":
+			Display_config_menu()
+		elif inputOptions == "M":
+			display_menu()
+		else:
+			print("Invalid Option")
+		return "Option Number 4: Create ending point has been selected."
 
 	else:
 		print("STOP")

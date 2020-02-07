@@ -19,7 +19,7 @@ def test_create_wall(mocked_input):
 	display_menu()
 	option= get_option()
 	option_function(option,maze)
-	assert maze[6][2] == "X"
+	assert maze[5][1] == "X"
 
 #Test for creating passageway
 @patch('builtins.input')
@@ -29,7 +29,7 @@ def test_create_passageway(mocked_input):
 	display_menu()
 	option= get_option()
 	option_function(option,maze)
-	assert maze[2][5] == "O"
+	assert maze[1][4] == "O"
 
 #Test for creating startpoint
 @patch('builtins.input')
@@ -39,20 +39,25 @@ def test_create_startpoint(mocked_input):
 	display_menu()
 	option= get_option()
 	option_function(option,maze)
-	assert maze[1][6] == "A"
+	assert maze[0][5] == "A"
 
 #Test for creating endpoint
-def test_create_endpoint():
+@patch('builtins.input')
+def test_create_endpoint(mocked_input):
 	mocked_input.side_effect = ["maze.csv", "4", "4", "7,1"]
 	maze = read_file()
 	display_menu()
 	option= get_option()
 	option_function(option,maze)
-	assert maze[7][1] == "B"
+	assert maze[6][0] == "B"
 
 #Test for exiting to main menu from configuration
 def test_exit_mainmenu():
-	choice= configChoice("B")
+	mocked_input.side_effect = ["maze.csv", "4", "4", "7,1"]
+	maze = read_file()
+	display_menu()
+	option= get_option()
+	option_function(option,maze)
 	assert value == True
 
 #Test for exiting to configuration menu

@@ -89,40 +89,43 @@ def config_options(maze):
 	if configOption == 1:
 		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
 		print("'B' to return to Configure Menu.")
-		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
-		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
-		#print(maze[int(optionInput)][int(optionInputColumn)])
-			maze[int(optionInput)-1][int(optionInputColumn)-1] = "X"
-			file = open('maze.csv','w')
-			for row in maze:
-                                for col in row:
-                                        file.write(col+',')
-                                file.write('\n')
+		inputOptions=input("'M' to return to Main Menu:")
+		if inputOptions != "B" and inputOptions != "M":
+			optionInput, optionInputColumn = inputOptions.split(',')
+			if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
+				maze[int(optionInput)-1][int(optionInputColumn)-1] = "X"
+				file = open('maze.csv','w')
+				for row in maze:
+                                	for col in row:
+                                        	file.write(col+',')
+                                	file.write('\n')
                         #file.close()
-		elif optionInput == "B":
+		elif inputOptions == "B":
 			Display_config_menu()
-		elif optionInput == "M":
+		elif inputOptions == "M":
 			display_menu()
 		else:
 			print("Invalid Option")
-		return "Option Number 1: Create Wall has been selected."
+		return "Option Number 2: Create Passageway has been selected."
 
 	#option for creating passageway
 	elif configOption == 2:
 		print("Enter the coordinate of the item you wish to change E.g. Row, Column")
 		print("'B' to return to Configure Menu.")
-		optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
-		if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
-			maze[int(optionInput)-1][int(optionInputColumn)-1] = "O"
-			file = open('maze.csv','w')
-			for row in maze:
-                                for col in row:
-                                        file.write(col+',')
-                                file.write('\n')
+		inputOptions=input("'M' to return to Main Menu:")
+		if inputOptions != "B" and inputOptions != "M":
+			optionInput, optionInputColumn = inputOptions.split(',')
+			if (optionInput.isdigit() and 0<=int(optionInput)<9 and 0<=int(optionInputColumn)<9):
+				maze[int(optionInput)-1][int(optionInputColumn)-1] = "O"
+				file = open('maze.csv','w')
+				for row in maze:
+                                	for col in row:
+                                        	file.write(col+',')
+                                	file.write('\n')
                         #file.close()
-		elif optionInput == "B":
+		elif inputOptions == "B":
 			Display_config_menu()
-		elif optionInput == "M":
+		elif inputOptions == "M":
 			display_menu()
 		else:
 			print("Invalid Option")
@@ -134,8 +137,8 @@ def config_options(maze):
 		print("'B' to return to Configure Menu.")
 		#optionInput, optionInputColumn=input("'M' to return to Main Menu:").split(',')
 		inputOptions=input("'M' to return to Main Menu:")
-		if (inputOptions != "B" or inputOptions != "M"):
-			optionInputRow, optionInputColumn= inputOptions.split(',')
+		if inputOptions != "B" and inputOptions != "M":
+			optionInputRow, optionInputColumn = inputOptions.split(',')
 			if (optionInputRow.isdigit() and 0<=int(optionInputRow)<9 and 0<=int(optionInputColumn)<9):
 				for row in maze:
 					for col in row:
@@ -153,6 +156,9 @@ def config_options(maze):
 						file.write(col+',')
 					file.write('\n')
                         #file.close()
+			else:
+				print("ok")
+
 		elif inputOptions == "B":
 			Display_config_menu()
 		elif inputOptions == "M":
@@ -167,7 +173,7 @@ def config_options(maze):
 		print("'B' to return to Configure Menu.")
 		inputOptions=input("'M' to return to Main Menu:")
 		#print(inputOptions)
-		if (inputOptions != "B" or inputOptions != "M"):
+		if inputOptions != "B" and inputOptions != "M":
 			optionInputRow, optionInputColumn= inputOptions.split(',')
 			if (optionInputRow.isdigit() and 0<=int(optionInputRow)<9 and 0<=int(optionInputColumn)<9):
 				for row in maze:

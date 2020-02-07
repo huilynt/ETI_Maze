@@ -200,6 +200,9 @@ def config_options(maze):
 			print("Invalid Option")
 		return "Option Number 4: Create ending point has been selected."
 
+	elif configOption == 0:
+		display_menu()
+
 	else:
 		print("STOP")
 

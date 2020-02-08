@@ -21,6 +21,10 @@ while running:
         print('[3] Play maze game')
     elif option == 4:
         print('[4] Configure current maze')
+        print("")
+        display_maze(maze)
+        print("")
+        option_function(option,maze)
     elif option == 0:
         print('[0] Exit maze')
         running = False

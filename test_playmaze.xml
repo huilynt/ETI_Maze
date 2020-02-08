@@ -1,20 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="LAPTOP-84643HL0" name="pytest" skipped="0" tests="1" time="0.290" timestamp="2020-02-08T16:14:01.879042"><testcase classname="" file="test_playmaze.py" name="test_playmaze" time="0.000"><error message="collection failure">..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\python.py:501: in _importtestmodule
-    mod = self.fspath.pyimport(ensuresyspath=importmode)
-..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\py\_path\local.py:701: in pyimport
-    __import__(modname)
-&lt;frozen importlib._bootstrap&gt;:971: in _find_and_load
-    ???
-&lt;frozen importlib._bootstrap&gt;:955: in _find_and_load_unlocked
-    ???
-&lt;frozen importlib._bootstrap&gt;:665: in _load_unlocked
-    ???
-..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\assertion\rewrite.py:133: in exec_module
-    source_stat, co = _rewrite_test(fn, self.config)
-..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\assertion\rewrite.py:282: in _rewrite_test
-    tree = ast.parse(source, filename=fn)
-..\..\..\appdata\local\programs\python\python36-32\lib\ast.py:35: in parse
-    return compile(source, filename, mode, PyCF_ONLY_AST)
-E     File &quot;C:\Users\Lucas Liew\Documents\GitHub\ETI_Maze\test_playmaze.py&quot;, line 82
-E       def test_back_to_main_menu():
-E         ^
-E   IndentationError: expected an indented block</error></testcase></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="LAPTOP-84643HL0" name="pytest" skipped="0" tests="10" time="0.226" timestamp="2020-02-08T17:26:50.730689"><testcase classname="test_playmaze" file="test_playmaze.py" line="17" name="test_A_moving_up" time="0.002"><system-out>[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="27" name="test_A_moving_down" time="0.002"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="38" name="test_A_moving_left" time="0.000"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="48" name="test_A_moving_right" time="0.002"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="58" name="test_A_not_moving_up_Q" time="0.000"><system-out>Please enter a valid letter!
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="68" name="test_hit_a_wall_W" time="0.002"></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="78" name="test_hit_a_wall_S" time="0.000"><system-out>Game Completed
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="89" name="test_hit_a_wall_A" time="0.001"><system-out>Invalid Move, Try Again
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="99" name="test_hit_a_wall_D" time="0.001"><system-out>Invalid Move, Try Again
+[&apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;A&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;A&apos;, &apos;X&apos;, &apos;O&apos;, &apos;O&apos;, &apos;O&apos;, &apos;X&apos;, &apos;X&apos;]
+[&apos;X&apos;, &apos;B&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;, &apos;X&apos;]
+</system-out></testcase><testcase classname="test_playmaze" file="test_playmaze.py" line="110" name="test_reach_b" time="0.003"><system-out>Game Completed
+</system-out></testcase></testsuite></testsuites>

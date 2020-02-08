@@ -76,13 +76,42 @@ def test_hit_a_wall_W():
     maze[newsc[1]][newsc[0]] == "X"
     assert newsc== [sc[0],sc[1]]
 
-#Test finished game: reached b
-def test_reach_b():
-
-def test_back_to_main_menu():
-    i = "m"
+def test_hit_a_wall_S():
+    i = "s"
     sc = [1,6]
     ec = [7,2]
-    mainmenu=move()
-    assert mainmenu == display_maze(maze)
-    
+    newsc= [sc[0],sc[1]+1]
+    newsc= [sc[0],sc[1]]
+    moved= move(i,sc,ec,maze)
+    maze[newsc[1]][newsc[0]] == "X"
+    assert newsc== [sc[0],sc[1]]
+
+
+def test_hit_a_wall_A():
+    i = "a"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0]-1,sc[1]]
+    newsc= [sc[0],sc[1]]
+    moved= move(i,sc,ec,maze)
+    maze[newsc[1]][newsc[0]] == "X"
+    assert newsc== [sc[0],sc[1]]
+
+def test_hit_a_wall_D():
+    i = "d"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0]+1,sc[1]]
+    newsc= [sc[0],sc[1]]
+    moved= move(i,sc,ec,maze)
+    maze[newsc[1]][newsc[0]] == "X"
+    assert newsc== [sc[0],sc[1]]
+
+#Test finished game: reached b
+def test_reach_b():
+    i = "s"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [ec[0],ec[1]]
+    moved= move(i,sc,ec,maze)
+    assert newsc== [ec[0],ec[1]]

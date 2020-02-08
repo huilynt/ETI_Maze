@@ -60,13 +60,15 @@ def test_exit_mainmenu(mocked_input):
 	option= get_option()
 	option_function(option,maze)
 	assert '''
+    MAIN MENU
+    =========
+    [1] Read and load maze from file
+    [2] View maze
+    [3] Play maze game
+    [4] Configure current maze
 
-	MAIN MENU
-
-	=========
-
-	[4] Configure current maze
-	''' == display_menu()
+    [0] Exit maze
+    ''' == display_menu()
 
 #Test for exiting to configuration menu (PASSING)
 @patch('builtins.input')

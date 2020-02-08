@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="DESKTOP-IDR51U3" name="pytest" skipped="3" tests="10" time="0.541" timestamp="2020-02-07T20:18:00.497300"><testcase classname="test_configuremaze" file="test_configuremaze.py" line="9" name="test_display_config_menu" time="0.003"><system-out>CONFIGURATION MENU
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="DESKTOP-IDR51U3" name="pytest" skipped="3" tests="10" time="0.256" timestamp="2020-02-08T18:16:32.933908"><testcase classname="test_configuremaze" file="test_configuremaze.py" line="9" name="test_display_config_menu" time="0.001"><system-out>CONFIGURATION MENU
 ==================
 [1] Create Wall
 [2] Create Passageway
@@ -7,7 +7,7 @@
 
 [0] Exit to Main Menu
 
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="14" name="test_create_wall" time="0.012"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="14" name="test_create_wall" time="0.009"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -29,7 +29,7 @@ CONFIGURATION MENU
 
 Enter the coordinate of the item you wish to change E.g. Row, Column
 &apos;B&apos; to return to Configure Menu.
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="24" name="test_create_passageway" time="0.021"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="24" name="test_create_passageway" time="0.010"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -51,7 +51,7 @@ CONFIGURATION MENU
 
 Enter the coordinate of the item you wish to change E.g. Row, Column
 &apos;B&apos; to return to Configure Menu.
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="34" name="test_create_startpoint" time="0.018"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="34" name="test_create_startpoint" time="0.009"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -73,7 +73,7 @@ CONFIGURATION MENU
 
 Enter the coordinate of the item you wish to change E.g. Row, Column
 &apos;B&apos; to return to Configure Menu.
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="44" name="test_create_endpoint" time="0.019"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="44" name="test_create_endpoint" time="0.007"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -95,7 +95,7 @@ CONFIGURATION MENU
 
 Enter the coordinate of the item you wish to change E.g. Row, Column
 &apos;B&apos; to return to Configure Menu.
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="54" name="test_exit_mainmenu" time="0.012"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="54" name="test_exit_mainmenu" time="0.007"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -133,7 +133,7 @@ Enter the coordinate of the item you wish to change E.g. Row, Column
 
 	[4] Configure current maze
 	
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="71" name="test_exit_configmenu" time="0.014"><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="71" name="test_exit_configmenu" time="0.004"><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -173,7 +173,7 @@ CONFIGURATION MENU
 
 [0] Exit to Main Menu
 
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="81" name="test_create_wall_failing" time="0.005"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="81" name="test_create_wall_failing" time="0.002"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -193,7 +193,7 @@ CONFIGURATION MENU
 
 [0] Exit to Main Menu
 
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="92" name="test_create_passageway_failing" time="0.005"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="92" name="test_create_passageway_failing" time="0.001"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
 Number of lines read: 8
 
 
@@ -203,5 +203,5 @@ Number of lines read: 8
 
 	[4] Configure current maze
 	
-</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="103" name="test_load_maze_failing" time="0.004"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
+</system-out></testcase><testcase classname="test_configuremaze" file="test_configuremaze.py" line="103" name="test_load_maze_failing" time="0.001"><skipped message="" type="pytest.xfail"></skipped><system-out>Option [1] Read and load maze from file
 </system-out></testcase></testsuite></testsuites>

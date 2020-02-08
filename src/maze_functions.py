@@ -32,6 +32,7 @@ def get_option():
 	return option
 
 
+
 # # Given a valid option (from get_option())
 # # print the option title
 # # run the corresponding function for each option
@@ -58,12 +59,14 @@ def get_option():
 
 #     return return_var, maze
 
+
 def option_function(option,maze):
 	if option == 4:
 		Display_config_menu()
 		config_options(maze)
 	else:
 		print("FAILURE")
+
 
 
 # [1] Read and load maze from file
@@ -103,11 +106,13 @@ def store_location(maze):
 
     return start_coordinate, end_coordinate
 
+
 # [2] View maze
 def display_maze(maze):
     disp_maze = '\n'.join(str(row) for row in maze)
     print(disp_maze)
     return disp_maze
+
 
 # [3] Play maze game
 
@@ -256,6 +261,3 @@ def config_options(maze):
 
 	else:
 		print("STOP")
-
-
-

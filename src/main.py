@@ -1,5 +1,4 @@
 from maze_functions import *
-import csv
 
 # Main program structure
 # running keeps the program alive, break my option_functions returning False
@@ -31,9 +30,3 @@ while running:
         running = False
     else:
         print('Invalid option! Please try again!')
-
-
-
-
-
-

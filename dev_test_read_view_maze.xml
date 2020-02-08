@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="0" hostname="me" name="pytest" skipped="0" tests="7" time="0.181" timestamp="2020-02-05T01:04:46.907679"><testcase classname="test_menu" file="test_menu.py" line="11" name="test_display_menu" time="0.003"><system-out>
+    MAIN MENU
+    =========
+    [1] Read and load maze from file
+    [2] View maze
+    [3] Play maze game
+    [4] Configure current maze
+
+    [0] Exit maze
+    
+</system-out></testcase><testcase classname="test_menu" file="test_menu.py" line="26" name="test_get_option" time="0.003"></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="41" name="test_read_file_valid" time="0.006"><system-out>Number of lines read: 8
+</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="47" name="test_read_file_invalid" time="0.005"><system-out>Invalid file type!
+</system-out></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="53" name="test_store_location_valid" time="0.004"></testcase><testcase classname="test_read_load_maze" file="test_read_load_maze.py" line="59" name="test_store_location_invalid" time="0.002"><system-out>Invalid maze!
+Invalid maze!
+Invalid maze!
+</system-out></testcase><testcase classname="test_view_maze" file="test_view_maze.py" line="16" name="test_view_maze" time="0.004"></testcase></testsuite></testsuites>

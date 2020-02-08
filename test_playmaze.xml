@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="1" failures="0" hostname="LAPTOP-84643HL0" name="pytest" skipped="0" tests="1" time="0.290" timestamp="2020-02-08T16:14:01.879042"><testcase classname="" file="test_playmaze.py" name="test_playmaze" time="0.000"><error message="collection failure">..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\python.py:501: in _importtestmodule
+    mod = self.fspath.pyimport(ensuresyspath=importmode)
+..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\py\_path\local.py:701: in pyimport
+    __import__(modname)
+&lt;frozen importlib._bootstrap&gt;:971: in _find_and_load
+    ???
+&lt;frozen importlib._bootstrap&gt;:955: in _find_and_load_unlocked
+    ???
+&lt;frozen importlib._bootstrap&gt;:665: in _load_unlocked
+    ???
+..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\assertion\rewrite.py:133: in exec_module
+    source_stat, co = _rewrite_test(fn, self.config)
+..\..\..\appdata\local\programs\python\python36-32\lib\site-packages\_pytest\assertion\rewrite.py:282: in _rewrite_test
+    tree = ast.parse(source, filename=fn)
+..\..\..\appdata\local\programs\python\python36-32\lib\ast.py:35: in parse
+    return compile(source, filename, mode, PyCF_ONLY_AST)
+E     File &quot;C:\Users\Lucas Liew\Documents\GitHub\ETI_Maze\test_playmaze.py&quot;, line 82
+E       def test_back_to_main_menu():
+E         ^
+E   IndentationError: expected an indented block</error></testcase></testsuite></testsuites>

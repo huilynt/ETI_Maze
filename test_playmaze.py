@@ -1,47 +1,88 @@
 import pytest
+import unittest
+from unittest import mock
+from unittest import TestCase
+from unittest.mock import patch
+from src.maze_functions import *
 
-#Test to display maze game with start and end location
-def test_display_maze_game():
-    displayed= display_maze()
-    assert displayed == disp_maze
-
+maze = [['X', 'X', 'X', 'X', 'X', 'X', 'X', 'X'],
+        ['X', 'O', 'O', 'O', 'X', 'O', 'A', 'X'],
+        ['X', 'O', 'X', 'O', 'X', 'O', 'X', 'X'],
+        ['X', 'O', 'X', 'O', 'X', 'O', 'O', 'X'],
+        ['X', 'O', 'X', 'O', 'X', 'X', 'O', 'X'],
+        ['X', 'O', 'X', 'O', 'X', 'O', 'O', 'X'],
+        ['X', 'O', 'X', 'O', 'O', 'O', 'X', 'X'],
+        ['X', 'B', 'X', 'X', 'X', 'X', 'X', 'X']]
 
 #Test for moving up when press 'W'
 def test_A_moving_up():
-    moved= move()
-    assert move == mazeup
+    i = "w"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0],sc[1]-1]
+    moved= move(i,sc,ec,maze)
+    assert newsc == [sc[0],sc[1]-1]
 
 
 #Test for Moving down when press 'S'
 def test_A_moving_down():
-    moved= move()
-    assert moved == mazedown
+    i = "s"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0],sc[1]+1]
+    moved= move(i,sc,ec,maze)
+    assert newsc == [sc[0],sc[1]+1]
+
 
 
 #Test for moving left when press 'A'
 def test_A_moving_left():
-    moved= move()
-    assert moved == mazeleft
+    i = "s"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0]-1,sc[1]]
+    moved= move(i,sc,ec,maze)
+    assert newsc == [sc[0]-1,sc[1]]
 
 
 #Test for moving right when press 'D'
 def test_A_moving_right():
-    moved= move()
-    assert moved == mazeright
+    i = "s"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0]+1,sc[1]]
+    moved= move(i,sc,ec,maze)
+    assert newsc == [sc[0]+1,sc[1]]
 
-
-#Test that A has moved position
-def test_A_not_in_same_position():
-    moved= move()
-    assert moved == True
 
 #test if dont press valid button and press Q will it move
 def test_A_not_moving_up_Q():
-    moved= move()
-    assert moved == False
+    i = "q"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0],sc[1]]
+    moved= move(i,sc,ec,maze)
+    assert newsc == [sc[0],sc[1]]
 
     
-#Test that error message prompted 
-def test_hit_a_wall():
-    invalidmovement= move()
-    assert invalidmovement == "Invalid"
+#Test current position remains A
+def test_hit_a_wall_W():
+    i = "w"
+    sc = [1,6]
+    ec = [7,2]
+    newsc= [sc[0],sc[1]-1]
+    newsc= [sc[0],sc[1]]
+    moved= move(i,sc,ec,maze)
+    maze[newsc[1]][newsc[0]] == "X"
+    assert newsc== [sc[0],sc[1]]
+
+#Test finished game: reached b
+def test_reach_b():
+
+def test_back_to_main_menu():
+    i = "m"
+    sc = [1,6]
+    ec = [7,2]
+    mainmenu=move()
+    assert mainmenu == display_maze(maze)
+    

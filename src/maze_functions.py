@@ -1,3 +1,4 @@
+
 # functions for the program
 
 import csv
@@ -150,8 +151,8 @@ def move(i,sc,ec,maze):
         elif(maze[newsc[1]][newsc[0]] == "B"):
             print("Game Completed")
             return maze, newsc
-                
-            
+
+
     elif (i== "s"):
         newsc = [acoor["x"],acoor["y"]+1]
 
@@ -163,32 +164,7 @@ def move(i,sc,ec,maze):
                 maze[newsc[1]][newsc[0]] = "A"
                 display_maze(maze)
                 return maze, newsc
-            
-        elif(maze[newsc[1]][newsc[0]] == "X"):
-                print("Invalid Move, Try Again")
-                maze[acoor["y"]][acoor["x"]] = "A"
-                maze[newsc[1]][newsc[0]] = "X"
-                newsc = [acoor["x"],acoor["y"]]
-                display_maze(maze)
-                return maze, newsc
-        elif(maze[newsc[1]][newsc[0]] == "B"):
-            print("Game Completed")
-            return maze, newsc
-                
-            
-    elif (i== "a"):
-        newsc = [acoor["x"]-1,acoor["y"]]
- 
-        #check if move is valid ( maze[y,x] to navigate through maze
-        if(maze[newsc[1]][newsc[0]] == "O"):
-                #set current position to O
-                maze[acoor["y"]][acoor["x"]] = "O"
-                #set new position to A
-                maze[newsc[1]][newsc[0]] = "A"
-                display_maze(maze)
-                return maze, newsc
-##                return mazeleft
-            
+
         elif(maze[newsc[1]][newsc[0]] == "X"):
                 print("Invalid Move, Try Again")
                 maze[acoor["y"]][acoor["x"]] = "A"
@@ -200,7 +176,32 @@ def move(i,sc,ec,maze):
             print("Game Completed")
             return maze, newsc
 
-            
+
+    elif (i== "a"):
+        newsc = [acoor["x"]-1,acoor["y"]]
+
+        #check if move is valid ( maze[y,x] to navigate through maze
+        if(maze[newsc[1]][newsc[0]] == "O"):
+                #set current position to O
+                maze[acoor["y"]][acoor["x"]] = "O"
+                #set new position to A
+                maze[newsc[1]][newsc[0]] = "A"
+                display_maze(maze)
+                return maze, newsc
+##                return mazeleft
+
+        elif(maze[newsc[1]][newsc[0]] == "X"):
+                print("Invalid Move, Try Again")
+                maze[acoor["y"]][acoor["x"]] = "A"
+                maze[newsc[1]][newsc[0]] = "X"
+                newsc = [acoor["x"],acoor["y"]]
+                display_maze(maze)
+                return maze, newsc
+        elif(maze[newsc[1]][newsc[0]] == "B"):
+            print("Game Completed")
+            return maze, newsc
+
+
     elif (i== "d"):
         newsc = [acoor["x"]+1,acoor["y"]]
         #check if move is valid ( maze[y,x] to navigate through maze
@@ -233,7 +234,7 @@ def move(i,sc,ec,maze):
         print("Please enter a valid letter!")
         display_maze(maze)
         return maze, newsc
-         
+
     return maze, newsc
 
 
@@ -241,7 +242,7 @@ def move(i,sc,ec,maze):
 #Display configuration menu with options
 config_menu= ["Create Wall", "Create Passageway", "Create Start Point", "Create End Point"]
 def Display_config_menu():
-	
+
 	print("CONFIGURATION MENU")
 	print("==================")
 	optionNo=1

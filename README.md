@@ -1,7 +1,13 @@
 # ETI Maze
 
-Maze game developed using TDD and DevOps.
+#### Module
+Emerging Trends in IT (ETI)
 
-## How to use this
+#### Objective
+Maze game developed using TDD and automated DevOps.
 
-Clone this and run `main.py`.
+#### Languages
+* Python
+* Github
+* Docker
+* Jenkins

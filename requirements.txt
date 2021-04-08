@@ -10,7 +10,7 @@ chardet==3.0.4
 Click==7.0
 colorama==0.4.1
 coverage==4.5.4
-Django==2.2.13
+Django==2.2.20
 execnet==1.7.1
 glob2==0.7
 idna==2.8

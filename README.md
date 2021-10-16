@@ -8,6 +8,8 @@ Maze game developed using TDD and automated DevOps.
 
 #### Languages
 * Python
+
+#### Others
 * Github
 * Docker
 * Jenkins
